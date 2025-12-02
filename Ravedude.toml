@@ -1,0 +1,22 @@
+[general]
+# After flashing, open the serial console at 57600 baud.
+board = "mega2560"
+open-console = true
+serial-baudrate = 9600
+serial-port = "/dev/ttyACM0"
+
+# For documentation about this file, check here:
+# https://github.com/Rahix/avr-hal/blob/main/ravedude/README.md#ravedudetoml-format
+
+#[board]
+#inherit = "uno"
+#name = "Custom Arduino Uno"
+
+#[board.usb-info]
+#port-ids = [
+#    { vid = 0x2341, pid = 0x0043 },
+#    { vid = 0x2341, pid = 0x0001 },
+#    { vid = 0x2A03, pid = 0x0043 },
+#    { vid = 0x2341, pid = 0x0243 },
+#    { vid = 0x1a86, pid = 0x7523 }
+#]
