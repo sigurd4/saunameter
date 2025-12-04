@@ -1,6 +1,6 @@
 [general]
 # After flashing, open the serial console at 57600 baud.
-board = "mega2560"
+board = "uno"
 open-console = true
 serial-baudrate = 9600
 serial-port = "/dev/ttyACM0"

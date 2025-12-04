@@ -23,7 +23,7 @@ embedded-dht-rs = { version = "0.5.0", features = ["dht22"] }
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
 rev = "fafaf587a32a4500239fd073f89d1b9c36b48092"
-features = ["arduino-mega2560"]
+features = ["arduino-uno"]
 
 # Configure the build for minimal size - AVRs have very little program memory
 [profile.dev]

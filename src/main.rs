@@ -39,8 +39,8 @@ fn main() -> ! {
 
     let mut i2c = I2c::new(
         dp.TWI,
-        pins.d20.into_pull_up_input(),
-        pins.d21.into_pull_up_input(),
+        pins.a4.into_pull_up_input(),
+        pins.a5.into_pull_up_input(),
         I2C_SPEED,
     );
 
