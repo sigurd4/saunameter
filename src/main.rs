@@ -1,15 +1,15 @@
 #![no_std]
 #![no_main]
 
-use arduino_hal::{Delay, I2c, Usart, i2c::Direction, prelude::_unwrap_infallible_UnwrapInfallible, usart::Baudrate};
+use arduino_hal::{Delay, I2c};
 use embedded_dht_rs::dht22::Dht22;
 use embedded_hal::delay::DelayNs;
 use lcd_lcm1602_i2c::{Backlight, Font, sync_lcd::Lcd};
 use panic_halt as _;
-use ufmt::{uDisplay, uWrite, uwrite, uwriteln};
+use ufmt::uwrite;
 use ufmt_float::uFmt_f32;
 
-const BAUD_RATE: u32 = 9600;
+//const BAUD_RATE: u32 = 9600;
 const I2C_SPEED: u32 = 400_000;
 const LOOP_MS: u32 = 500;
 
@@ -34,8 +34,6 @@ fn main() -> ! {
         pins.d1.into_output(),
         Baudrate::new(BAUD_RATE)
     );*/
-
-    let mut led = pins.d13.into_output();
 
     let mut i2c = I2c::new(
         dp.TWI,
@@ -64,8 +62,6 @@ fn main() -> ! {
     let delay = &mut Delay::new();
 
     loop {
-        led.toggle();
-
         let data = dht.read().unwrap();
 
         lcd.set_cursor(0, 0).unwrap();

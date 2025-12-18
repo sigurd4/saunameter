@@ -4,9 +4,8 @@ MCU:
 Power junction:
 - 2x 1N4001
 - 2x 100 nF
-- 2x 47 uF
-- 1x LM7805
+* 1x LM7805 (hjemme)
 
-Resonator (ping 9 and 10):
+Resonator (pin 9 and 10):
 - 2x 22 pF
-- 1x 16 MHz quartz crystal resonator
+* 1x 16 MHz quartz crystal resonator (bestilt)
